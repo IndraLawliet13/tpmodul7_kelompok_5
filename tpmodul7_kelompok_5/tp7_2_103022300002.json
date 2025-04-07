@@ -1,0 +1,28 @@
+{
+	"courses": [
+		{
+			"code": "CCK2KAB4",
+			"name": "Konstruksi Perangkat Lunak"
+		},
+		{
+			"code": "CCK2FAB4",
+			"name": "ARSITEKTUR DAN DESAIN PERANGKAT LUNAK"
+		},
+		{
+			"code": "CCK2HAB4",
+			"name": "Basis Data"
+		},
+		{
+			"code": "CCK2IAB3",
+			"name": "DASAR JARINGAN KOMPUTER"
+		},
+		{
+			"code": "CCK2LAB3",
+			"name": "KECERDASAN BUATAN"
+		},
+		{
+			"code": "CCK2JAC2",
+			"name": "PROYEK TINGKAT"
+		}
+	]
+}
