@@ -18,7 +18,7 @@ public class KuliahMahasiswa103022300027
 {
     public void ReadJSON()
     {
-        string jsonFileName = "C:\\Users\\ASUS\\source\\repos\\tpmodul7_kelompok_5\\tpmodul7_kelompok_5\\tp7_2_103022300027.json";
+        string jsonFileName = "tp7_2_103022300027.json";
         try
         {
             string jsonString = File.ReadAllText(jsonFileName);

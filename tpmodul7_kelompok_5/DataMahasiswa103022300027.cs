@@ -19,14 +19,15 @@ public class DataMahasiswa103022300027
 {
     public void ReadJSON()
     {
-        string jsonFileName = "C:\\Users\\ASUS\\source\\repos\\tpmodul7_kelompok_5\\tpmodul7_kelompok_5\\tp7_1_103022300027.json";
+        string jsonFileName = "tp7_1_103022300027.json";
         try
         {
             string jsonString = File.ReadAllText(jsonFileName);
             MahasiswaData dataMahasiswa = JsonSerializer.Deserialize<MahasiswaData>(jsonString);
             if (dataMahasiswa != null)
             {
-                Console.WriteLine($"Nama {dataMahasiswa.nama.depan} {dataMahasiswa.nama.belakang} dengan nim {dataMahasiswa.nim} dari fakultas {dataMahasiswa.fakultas}");
+                Console.WriteLine($"Nama {dataMahasiswa.nama.depan} {dataMahasiswa.nama.belakang} dengan nim " +
+                    $"{dataMahasiswa.nim} dari fakultas {dataMahasiswa.fakultas}");
             }
             else
             {
