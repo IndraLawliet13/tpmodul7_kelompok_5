@@ -1,12 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 
-namespace tpmodul7_kelompok_5
+public class Course
 {
-    class KuliahMahasiswa103022300023
+    public string code { get; set; }
+    public string name { get; set; }
+}
+
+public class CourseData
+{
+    public List<Course> courses { get; set; }
+}
+
+public class KuliahMahasiswa103022300023
+{
+    public void ReadJSON()
     {
+        string jsonFileName = "tp7_2_103022300023.json";
+        try
+        {
+            string jsonString = File.ReadAllText(jsonFileName);
+            CourseData dataKuliah = JsonSerializer.Deserialize<CourseData>(jsonString);
+            if (dataKuliah != null && dataKuliah.courses != null)
+            {
+                Console.WriteLine("Daftar mata kuliah yang diambil:");
+                for (int i = 0; i < dataKuliah.courses.Count; i++)
+                {
+                    Course matkul = dataKuliah.courses[i];
+                    Console.WriteLine($"MK {i + 1} {matkul.code} - {matkul.name}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Gagal melakukan deserialisasi data JSON atau daftar mata kuliah kosong.");
+            }
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine($"Error: File JSON '{jsonFileName}' tidak ditemukan.");
+        }
+        catch (JsonException ex)
+        {
+            Console.WriteLine($"Error saat parsing JSON: {ex.Message}. Pastikan format JSON valid.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Terjadi error: {ex.Message}");
+        }
     }
 }

@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <None Remove="tp7_1_103022300023.json" />
+    <None Remove="tp7_2_103022300023.json" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="tp7_1_103022300023.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tp7_2_103022300023.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
