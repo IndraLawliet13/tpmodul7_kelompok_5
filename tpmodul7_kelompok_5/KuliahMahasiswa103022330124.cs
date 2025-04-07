@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-public class Course103022300017
+public class Course103022330124
 {
     public string code { get; set; }
     public string name { get; set; }
 }
 
-public class CourseData103022300017
+public class CourseData103022330124
 {
-    public List<Course103022300017> courses { get; set; }
+    public List<Course103022330124> courses { get; set; }
 }
 
-public class KuliahMahasiswa103022300017
+public class KuliahMahasiswa103022330124
 {
     public void ReadJSON()
     {
-        string jsonFileName = "tp7_2_103022300017.json";
+        string jsonFileName = "tp7_2_103022330124.json";
         try
         {
             string jsonString = File.ReadAllText(jsonFileName);
-            CourseData103022300017 dataKuliah = JsonSerializer.Deserialize<CourseData103022300017>(jsonString);
+            CourseData103022330124 dataKuliah = JsonSerializer.Deserialize<CourseData103022330124>(jsonString);
             if (dataKuliah != null && dataKuliah.courses != null)
             {
                 Console.WriteLine("Daftar mata kuliah yang diambil:");
                 for (int i = 0; i < dataKuliah.courses.Count; i++)
                 {
-                    Course103022300017 matkul = dataKuliah.courses[i];
+                    Course103022330124 matkul = dataKuliah.courses[i];
                     Console.WriteLine($"MK {i + 1} {matkul.code} - {matkul.name}");
                 }
             }

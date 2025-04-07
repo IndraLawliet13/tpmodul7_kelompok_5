@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-public class Course
+public class Course103022300027
 {
     public string code { get; set; }
     public string name { get; set; }
 }
 
-public class CourseData
+public class CourseData103022300027
 {
-    public List<Course> courses { get; set; }
+    public List<Course103022300027> courses { get; set; }
 }
 
 public class KuliahMahasiswa103022300027
@@ -22,13 +22,13 @@ public class KuliahMahasiswa103022300027
         try
         {
             string jsonString = File.ReadAllText(jsonFileName);
-            CourseData dataKuliah = JsonSerializer.Deserialize<CourseData>(jsonString);
+            CourseData103022300027 dataKuliah = JsonSerializer.Deserialize<CourseData103022300027>(jsonString);
             if (dataKuliah != null && dataKuliah.courses != null)
             {
                 Console.WriteLine("Daftar mata kuliah yang diambil:");
                 for (int i = 0; i < dataKuliah.courses.Count; i++)
                 {
-                    Course matkul = dataKuliah.courses[i];
+                    Course103022300027 matkul = dataKuliah.courses[i];
                     Console.WriteLine($"MK {i + 1} {matkul.code} - {matkul.name}");
                 }
             }

@@ -19,6 +19,9 @@
     <None Update="tp7_1_103022300027.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="tp7_1_103022330124.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="tp7_2_103022300027.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -27,6 +30,9 @@
     </None>
     <None Update="tp7_2_103022300017.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="tp7_2_103022330124.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Remove="tp7_1_103022300023.json" />
     <None Remove="tp7_2_103022300023.json" />

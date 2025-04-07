@@ -2,15 +2,15 @@
 using System.IO;
 using System.Text.Json;
 
-public class NamaMahasiswa
+public class NamaMahasiswa103022300027
 {
     public string depan { get; set; }
     public string belakang { get; set; }
 }
 
-public class MahasiswaData
+public class MahasiswaData103022300027
 {
-    public NamaMahasiswa nama { get; set; }
+    public NamaMahasiswa103022300027 nama { get; set; }
     public string nim { get; set; }
     public string fakultas { get; set; }
 }
@@ -23,7 +23,7 @@ public class DataMahasiswa103022300027
         try
         {
             string jsonString = File.ReadAllText(jsonFileName);
-            MahasiswaData dataMahasiswa = JsonSerializer.Deserialize<MahasiswaData>(jsonString);
+            MahasiswaData103022300027 dataMahasiswa = JsonSerializer.Deserialize<MahasiswaData103022300027>(jsonString);
             if (dataMahasiswa != null)
             {
                 Console.WriteLine($"Nama {dataMahasiswa.nama.depan} {dataMahasiswa.nama.belakang} dengan nim " +
