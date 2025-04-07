@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="tp7_1_103022300002.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="tp7_1_103022300002.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
